@@ -1,0 +1,9 @@
+# Ignore everything
+*
+# Except these
+!.bash_aliases
+!.bash_profile
+!.bashrc
+!.gitignore
+!.gitconfig
+!.inputrc
