@@ -1,9 +1,2 @@
-# Ignore everything
+# Ignore everything except those force added
 *
-# Except these
-!.bash_aliases
-!.bash_profile
-!.bashrc
-!.gitignore
-!.gitconfig
-!.inputrc

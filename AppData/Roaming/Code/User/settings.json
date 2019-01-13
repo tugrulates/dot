@@ -1,0 +1,27 @@
+{
+    "editor.renderWhitespace": "all",
+    "window.menuBarVisibility": "toggle",
+    "files.eol": "\n",
+    "python.unitTest.unittestEnabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "files.insertFinalNewline": true,
+    "editor.rulers": [
+        100
+    ],
+    "[python]": {},
+    "git.autofetch": true,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.windows": "C:\\\\Windows\\\\System32\\\\bash.exe",
+    "git.confirmSync": false,
+    "telemetry.enableTelemetry": false,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "100"
+    ],
+    "terminal.external.linuxExec": "bash",
+    "terminal.external.windowsExec": "C:\\\\Windows\\\\System32\\\\bash.exe",
+}

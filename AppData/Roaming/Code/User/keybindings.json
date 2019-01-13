@@ -1,0 +1,18 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "shift+alt+t",
+        "command": "python.runtests",
+        "when": "editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "editor.action.formatSelection",
+        "when": "editorTextFocus && !editorReadonly && editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "editor.action.formatDocument",
+        "when": "editorTextFocus && !editorReadonly && !editorHasSelection"
+    },
+]
