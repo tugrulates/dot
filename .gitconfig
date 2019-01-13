@@ -1,6 +1,8 @@
 [user]
 	email = tugrulkagan@gmail.com
 	name = Tugrul Ates
+[alias]
+  lg = log --graph --oneline --all --decorate
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
