@@ -12,6 +12,9 @@ alias setup-rebuild='python setup.py build'
 alias setup-clean='python setup.py clean'
 alias setup-test='python setup.py test'
 
+#mosh
+alias mosh='mosh -6'
+
 # WSL specific
 if [[ $(uname -a) == *"Linux"*"Microsoft"* && -d $HOME/Miniconda3 ]]; then
   alias python=~/Miniconda3/python.exe
