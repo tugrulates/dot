@@ -1,4 +1,5 @@
 export EDITOR='code --wait'
+export HISTCONTROL=ignoredups
 
 # Colors
 alias grep='grep --color=auto'
