@@ -1,14 +1,14 @@
 [user]
-	email = tugrulkagan@gmail.com
-	name = Tugrul Ates
+  email = tugrulkagan@gmail.com
+  name = Tugrul Ates
 [alias]
   lg = log --graph --oneline --all --decorate
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [core]
-	editor = code --wait
+  editor = code --wait
 [credential]
-	helper = wincred
+  helper = wincred
