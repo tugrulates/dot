@@ -6,11 +6,7 @@ alias l='ls -l'
 alias x='xargs -L 1 -I{}'
 
 # setuptools
-alias setup-develop='python setup.py build develop'
-alias setup-develop-uninstall='python setup.py develop --uninstall'
-alias setup-rebuild='python setup.py build'
-alias setup-clean='python setup.py clean'
-alias setup-test='python setup.py test'
+alias setup='python setup.py'
 
 #mosh
 alias mosh='mosh -6'
