@@ -13,7 +13,7 @@
     "editor.tabSize": 2,
     "files.trimTrailingWhitespace": true,
     "window.zoomLevel": 0,
-    "terminal.integrated.shell.windows": "C:\\\\Windows\\\\System32\\\\bash.exe",
+    "terminal.integrated.shell.windows": "C:\\\\Windows\\System32\\bash.exe",
     "git.confirmSync": false,
     "telemetry.enableTelemetry": false,
     "editor.formatOnSave": true,
@@ -23,7 +23,7 @@
         "100"
     ],
     "terminal.external.linuxExec": "bash",
-    "terminal.external.windowsExec": "C:\\\\Windows\\\\System32\\\\bash.exe",
+    "terminal.external.windowsExec": "C:\\\\Windows\\System32\\bash.exe",
     "python.terminal.activateEnvironment": false,
     "editor.minimap.enabled": false,
 }
