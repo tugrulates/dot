@@ -2,7 +2,7 @@
     "editor.renderWhitespace": "all",
     "window.menuBarVisibility": "toggle",
     "files.eol": "\n",
-    "python.unitTest.unittestEnabled": true,
+    "python.testing.unittestEnabled": true,
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "editor.rulers": [
