@@ -26,6 +26,5 @@
     "terminal.external.windowsExec": "C:\\\\Windows\\System32\\bash.exe",
     "python.terminal.activateEnvironment": false,
     "editor.minimap.enabled": false,
-    "rust-client.useWSL": true,
     "git.enableSmartCommit": true
 }
