@@ -11,4 +11,6 @@
 [core]
   editor = code --wait
 [credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+  helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[gui]
+  encoding = utf-8
