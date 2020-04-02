@@ -8,8 +8,11 @@ alias x='xargs -L 1 -I{}'
 # setuptools
 alias setup='python setup.py'
 
-#mosh
+# mosh
 alias mosh='mosh -6'
+
+# Rust
+alias cargo='RUST_BACKTRACE=1 cargo'
 
 # WSL specific
 if [[ $(uname -a) == *"Linux"*"Microsoft"* && -d $HOME/Miniconda3 ]]; then
