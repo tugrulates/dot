@@ -11,9 +11,6 @@ alias setup='python setup.py'
 # mosh
 alias mosh='mosh -6'
 
-# Rust
-alias cargo='RUST_BACKTRACE=1 cargo'
-
 # WSL specific
 if [[ $(uname -a) == *"Linux"*"Microsoft"* && -d $HOME/Miniconda3 ]]; then
   alias python=~/Miniconda3/python.exe
