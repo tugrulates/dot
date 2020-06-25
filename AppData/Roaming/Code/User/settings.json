@@ -31,6 +31,5 @@
         "typescript"
     ],
     "task.autoDetect": "off",
-    "debug.onTaskErrors": "showErrors",
-    "remote.WSL.fileWatcher.polling": true
+    "debug.onTaskErrors": "showErrors"
 }
