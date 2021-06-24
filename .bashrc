@@ -29,3 +29,4 @@ PS1+="\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
 export PS1
 
 source ~/.bash_aliases
+source "$HOME/.cargo/env"
