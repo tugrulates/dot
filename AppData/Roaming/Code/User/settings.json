@@ -31,5 +31,9 @@
         "typescript"
     ],
     "task.autoDetect": "off",
-    "debug.onTaskErrors": "showErrors"
+    "debug.onTaskErrors": "showErrors",
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.inheritEnv": false,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.defaultInterpreterPath": "python3"
 }
