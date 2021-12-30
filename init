@@ -1,16 +1,18 @@
 #!/bin/bash
 
+dir=$(dirname $(readlink -f $0))
+
 # ~/
 for file in .bash_aliases .bash_profile .bashrc .condarc .gitconfig .inputrc
 do
   unlink ~/${file} 2> /dev/null
-  ln -s $(dirname $0)/${file} ~/${file}
+  ln -s ${dir}/${file} ~/${file}
 done
 
 # /etc/
 for file in /etc/wsl.conf
 do
-  if [[ ! -f ${file} || -n $(diff $(dirname $0)${file} ${file}) ]] ; then
-    sudo cp -i $(dirname $0)${file} ${file}
+  if [[ ! -f ${file} || -n $(diff ${dir}${file} ${file}) ]] ; then
+    sudo cp -i ${dir}${file} ${file}
   fi
 done
