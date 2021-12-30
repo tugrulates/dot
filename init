@@ -1,7 +1,16 @@
 #!/bin/bash
 
+# ~/
 for file in .bash_aliases .bash_profile .bashrc .gitconfig .inputrc
 do
   unlink ~/${file} 2> /dev/null
   ln -s $(dirname $0)/${file} ~/${file}
+done
+
+# /etc/
+for file in /etc/wsl.conf
+do
+  if [[ ! -f ${file} || -n $(diff $(dirname $0)${file} ${file}) ]] ; then
+    sudo cp -i $(dirname $0)${file} ${file}
+  fi
 done
