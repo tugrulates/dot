@@ -3,7 +3,7 @@
 dir=$(dirname $(readlink -f $0))
 
 # ~/
-for file in .bash_aliases .bash_profile .bashrc .condarc .gitconfig .inputrc
+for file in .bash_aliases .bash_profile .bashrc .condarc .gitattributes .gitconfig .inputrc
 do
   unlink ~/${file} 2> /dev/null
   ln -s ${dir}/${file} ~/${file}
