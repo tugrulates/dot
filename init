@@ -3,7 +3,7 @@
 dir=$(dirname $(readlink -f $0))
 
 # ~/
-for file in .bash_aliases .bash_profile .bashrc .condarc .gitattributes .gitconfig .inputrc
+for file in .bash_aliases .bash_profile .bashrc .condarc .gitconfig .inputrc
 do
   unlink ~/${file} 2> /dev/null
   ln -s ${dir}/${file} ~/${file}
@@ -12,6 +12,7 @@ done
 # ~/windows
 if [[ -d ~/windows ]] ; then
   for file in .gitconfig
+  do
     if [[ ! -f ~/windows/${file} || -n $(diff ~/${file} ~/windows/${file}) ]] ; then
       cp -i ~/${file} ~/windows/${file}
     fi
