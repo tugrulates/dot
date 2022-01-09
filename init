@@ -9,6 +9,15 @@ do
   ln -s ${dir}/${file} ~/${file}
 done
 
+# ~/windows
+if [[ -d ~/windows ]] ; then
+  for file in .gitconfig
+    if [[ ! -f ~/windows/${file} || -n $(diff ~/${file} ~/windows/${file}) ]] ; then
+      cp -i ~/${file} ~/windows/${file}
+    fi
+  done
+fi
+
 # /etc/
 for file in /etc/wsl.conf
 do
