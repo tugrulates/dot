@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dir=$(dirname $(readlink -f $0))
+win_sed='s/#\s*win:\s*//'
 
 # ~/
 for file in .bash_aliases .bash_profile .bashrc .condarc .gitconfig .inputrc
@@ -13,8 +14,10 @@ done
 if [[ -d ~/windows ]] ; then
   for file in .gitconfig
   do
-    if [[ ! -f ~/windows/${file} || -n $(diff ~/${file} ~/windows/${file}) ]] ; then
-      cp -i ~/${file} ~/windows/${file}
+    win_config=$(mktemp)
+    sed 's/#\s*win:\s*//' ${dir}/${file} > $win_config
+    if [[ ! -f ~/windows/${file} || -n $(diff ~/windows/${file} ${win_config}) ]] ; then
+      cp -i ${win_config} ~/windows/${file}
     fi
   done
 fi
