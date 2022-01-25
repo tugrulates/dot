@@ -12,5 +12,7 @@
   autocrlf = input
   editor = code --wait
   # win: filemode = false
+[init]
+  defaultBranch = main
 [gui]
   encoding = utf-8
