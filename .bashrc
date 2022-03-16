@@ -45,6 +45,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# zola
+export PATH="/home/tugrul/code/zola/target/release:$PATH"
+
 if [ "$(conda 2> /dev/null)" ]; then
     conda activate dev
 fi
