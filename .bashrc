@@ -1,7 +1,19 @@
-export EDITOR='code --wait'
-export HISTCONTROL=ignoredups
+# skip if not interactive
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-# Colors
+# editor
+export EDITOR='code --wait'
+
+# history
+export HISTCONTROL=ignoredups
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# colors
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias ls='ls --color=auto'
@@ -9,7 +21,13 @@ alias dir='dir --color=auto'
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-# Prompt
+# window
+shopt -s checkwinsize
+
+# less
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# prompt
 COLOR_YELLOW="\033[0;93m"
 COLOR_GREEN="\033[0;92m"
 COLOR_MAGENTA="\033[0;95m"
@@ -28,4 +46,7 @@ PS1+="\[$COLOR_YELLOW\]\$(git_branch)"
 PS1+="\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
 export PS1
 
-source ~/.bash_aliases
+# aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
