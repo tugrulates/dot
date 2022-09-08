@@ -28,7 +28,4 @@ PS1+="\[$COLOR_YELLOW\]\$(git_branch)"
 PS1+="\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
 export PS1
 
-# zola
-export PATH="/home/tugrul/code/zola/target/release:$PATH"
-
 source ~/.bash_aliases
