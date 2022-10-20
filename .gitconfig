@@ -3,7 +3,7 @@
   name = Tugrul Ates
 [alias]
   lg = log --graph --oneline --all --decorate
-  wrap = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+  wrap = !git checkout main && git pull && git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
