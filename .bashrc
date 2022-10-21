@@ -29,11 +29,11 @@ shopt -s checkwinsize
 
 # prompt
 function __bash_prompt {
-  local yellow="\033[0;93m"
-  local green="\033[0;92m"
-  local magenta="\033[0;95m"
-  local white="\033[0;37m"
-  local color_reset="\033[0m"
+  local yellow="\[$(tput setaf 11)\]"
+  local green="\[$(tput setaf 10)\]"
+  local magenta="\[$(tput setaf 13)\]"
+  local white="\[$(tput setaf 15)\]"
+  local color_reset="\[$(tput sgr0)\]"
   local user='`[ ! -z "${GITHUB_USER}" ] && echo -n "@${GITHUB_USER}" || echo -n "\u@\h"`'
   local gitbranch='`\
     if [ "$(git config --get codespaces-theme.hide-status 2>/dev/null)" != 1 ]; then \
