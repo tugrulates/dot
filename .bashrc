@@ -51,7 +51,14 @@ function __bash_prompt {
 }
 __bash_prompt
 
-# aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# profiles (aliases, completion etc.)
+profiles=(
+  ~/.bash_aliases
+  /etc/bash_completion.d/git
+  /usr/share/bash-completion/completions/git
+)
+for profile in $profiles; do
+  if [ -f $profile ]; then
+    . $profile
+  fi
+done
