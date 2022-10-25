@@ -1,7 +1,7 @@
 # skip if not interactive
 case $- in
-    *i*) ;;
-      *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # editor
@@ -37,14 +37,14 @@ function __bash_prompt {
   local user='`[ ! -z "${GITHUB_USER}" ] && echo -n "@${GITHUB_USER}" || echo -n "\u@\h"`'
   local gitbranch='`\
     if [ "$(git config --get codespaces-theme.hide-status 2>/dev/null)" != 1 ]; then \
-        export BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null); \
-        if [ "${BRANCH}" != "" ]; then \
-            echo -n " (${BRANCH}" \
-            && if git ls-files --error-unmatch -m --directory --no-empty-directory -o --exclude-standard ":/*" > /dev/null 2>&1; then \
-                    echo -n "*"; \
-            fi \
-            && echo -n ")"; \
-        fi; \
+      export BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null); \
+      if [ "${BRANCH}" != "" ]; then \
+        echo -n " (${BRANCH}" \
+        && if git ls-files --error-unmatch -m --directory --no-empty-directory -o --exclude-standard ":/*" > /dev/null 2>&1; then \
+                echo -n "*"; \
+        fi \
+        && echo -n ")"; \
+      fi; \
     fi`'
   PS1="${green}${user}:${magenta}\w${yellow}${gitbranch}${color_reset}\$ "
   unset -f __bash_prompt
