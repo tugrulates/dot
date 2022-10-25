@@ -52,12 +52,12 @@ function __bash_prompt {
 __bash_prompt
 
 # profiles (aliases, completion etc.)
-profiles=(
+declare -a profiles=(
   ~/.bash_aliases
   /etc/bash_completion.d/git
   /usr/share/bash-completion/completions/git
 )
-for profile in $profiles; do
+for profile in "${profiles[@]}"; do
   if [ -f $profile ]; then
     . $profile
   fi
