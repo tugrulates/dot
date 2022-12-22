@@ -64,7 +64,12 @@ for profile in "${profiles[@]}"; do
 done
 
 # mac
-if [[ -d /opt/homebrew ]]; then
+if [ -d /opt/homebrew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+
+# wsl
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$PATH:$HOME/.local/bin"
 fi
