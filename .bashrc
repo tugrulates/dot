@@ -68,6 +68,9 @@ if [ -d /opt/homebrew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export BASH_SILENCE_DEPRECATION_WARNING=1
 fi
+if [ -d "$(python3 -m site --user-base)/bin" ]; then
+  export PATH="$PATH:$(python3 -m site --user-base)/bin"
+fi
 
 # wsl
 if [ -d "$HOME/.local/bin" ]; then
