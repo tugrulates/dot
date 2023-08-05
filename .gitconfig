@@ -1,21 +1,21 @@
 [user]
-  email = me@tugrulates.com
-  name = Tugrul Ates
+email = me@tugrulates.com
+name = Tugrul Ates
 [alias]
-  lg = log --graph --oneline --all --decorate
-  s = status
-  wrap = !git checkout main && git pull && git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+lg = log --graph --oneline --all --decorate
+s = status
+wrap = !git checkout main && git pull && git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
 [core]
-  autocrlf = input
-  editor = code --wait
-  excludesFile = ~/.gitignore
-  # win: fileMode = false
+autocrlf = input
+editor = code --wait
+excludesFile = ~/.gitignore
+# win: fileMode = false
 [init]
-  defaultBranch = main
+defaultBranch = main
 [gui]
-  encoding = utf-8
+encoding = utf-8
