@@ -13,6 +13,7 @@
 [core]
   autocrlf = input
   editor = code --wait
+  excludesFile = ~/.gitignore
   # win: fileMode = false
 [init]
   defaultBranch = main
