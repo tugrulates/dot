@@ -54,6 +54,7 @@ __bash_prompt
 # profiles (aliases, completion etc.)
 declare -a profiles=(
   ~/.bash_aliases
+  /opt/homebrew/etc/profile.d/bash_completion.sh
   /etc/bash_completion.d/git
   /usr/share/bash-completion/completions/git
 )
@@ -70,6 +71,11 @@ if [ -d /opt/homebrew ]; then
 fi
 if [ -d "$(python3 -m site --user-base)/bin" ]; then
   export PATH="$PATH:$(python3 -m site --user-base)/bin"
+fi
+
+# gh
+if which gh >/dev/null; then
+  eval "$(gh completion -s bash)"
 fi
 
 # wsl
