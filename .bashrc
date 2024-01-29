@@ -10,8 +10,8 @@ export EDITOR='code --wait'
 # history
 export HISTCONTROL=ignoredups
 shopt -s histappend
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=${HISTSIZE}
 
 # colors
 alias grep='grep --color=auto'
