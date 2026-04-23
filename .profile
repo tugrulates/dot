@@ -23,3 +23,11 @@ export EDITOR
 
 # gpg
 export GPG_TTY=$(tty)
+
+# telemetry
+export DO_NOT_TRACK=true
+export DISABLE_TELEMETRY=1
+export ASTRO_TELEMETRY_DISABLED=1
+export GH_TELEMETRY=false
+export GLAB_SEND_TELEMETRY=false
+export VERCEL_TELEMETRY_DISABLED=1
